@@ -3,56 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Hub - Home</title>
+    <title>Technology Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header class="hero">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>Welcome to Gaming Hub</h1>
-            <p>Explore the latest games, reviews, and gaming news!</p>
-            <a href="games.html" class="btn">Explore Games</a>
+            <h1>Welcome to Our Technology Blog</h1>
+            <p class="hero-description">Stay updated with the latest in technology, software development, and IT solutions.</p>
+            <a href="#blog" class="btn">Read Our Articles</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <div class="about-content">
-                <h2>About Gaming Hub</h2>
-                <p>Gaming Hub is your ultimate destination for everything gaming-related. We provide in-depth reviews, news, and tips to enhance your gaming experience.</p>
-            </div>
-        </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are passionate about sharing insights and knowledge in the field of technology and IT.</p>
+        </div>
+    </section>
 
-        <section id="featured-games">
-            <h2>Featured Games</h2>
-            <div class="game">
-                <img src="game1.jpg" alt="Game 1">
-                <h3>Game 1 Title</h3>
-                <p>Description of Game 1.</p>
-            </div>
-            <div class="game">
-                <img src="game2.jpg" alt="Game 2">
-                <h3>Game 2 Title</h3>
-                <p>Description of Game 2.</p>
-            </div>
-            <!-- Add more games as needed -->
-        </section>
-    </main>
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <h2>Latest Articles</h2>
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <article class="blog-post">
+                    <h3>Introduction to Artificial Intelligence</h3>
+                    <p class="meta">Published on <time datetime="2024-07-12">July 12, 2024</time></p>
+                    <p>Explore the basics of AI and its applications in today's world.</p>
+                    <a href="#" class="btn">Read More</a>
+                </article>
 
+                <!-- Article 2 -->
+                <article class="blog-post">
+                    <h3>The Future of Blockchain Technology</h3>
+                    <p class="meta">Published on <time datetime="2024-07-10">July 10, 2024</time></p>
+                    <p>Discover how blockchain is reshaping industries and its potential for the future.</p>
+                    <a href="#" class="btn">Read More</a>
+                </article>
+
+                <!-- Add more articles as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to contribute? Get in touch with us!</p>
+            <form action="submit.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Gaming Hub. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Technology Blog. All rights reserved.</p>
+        </div>
     </footer>
-    
+
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>

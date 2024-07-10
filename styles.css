@@ -11,15 +11,44 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #1b1b1b;
-    color: #fff;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text color */
+}
+
+/* Navigation */
+nav {
+    background-color: #212529; /* Dark background for navigation */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #f8f9fa; /* White text color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #6c757d; /* Darker gray on hover */
 }
 
 /* Hero section */
 .hero {
     position: relative;
     height: 100vh;
-    background-image: url('hero-bg.jpg');
+    background-image: url('hero-background.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -27,7 +56,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #f8f9fa; /* White text color */
     overflow: hidden; /* Ensure background image doesn't overflow */
 }
 
@@ -49,122 +78,130 @@ body {
     margin-bottom: 20px;
 }
 
-.hero p {
+.hero p.hero-description {
     font-size: 1.2rem;
     margin-bottom: 30px;
     max-width: 600px;
     line-height: 1.6;
 }
 
-nav {
-    position: absolute;
-    bottom: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #f0ad4e; /* Highlight color */
-}
-
-/* About section */
-#about {
-    background-color: #333;
+/* Section styling */
+.section {
     padding: 50px 0;
     text-align: center;
 }
 
-.about-content {
+.container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.about-content h2 {
-    color: #f0ad4e;
+.container h2 {
+    color: #343a40; /* Dark gray heading color */
     margin-bottom: 20px;
 }
 
-.about-content p {
-    color: #ccc;
+.container p {
+    color: #6c757d; /* Gray text color */
     line-height: 1.6;
 }
 
-/* Featured games section */
-#featured-games {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 50px 0;
-    background-color: #222;
+/* Blog grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 30px;
 }
 
-.game {
-    width: 100%; /* Ensure each game section takes full width */
-    max-width: 300px; /* Limit maximum width of game sections */
-    margin: 0 auto; /* Center align game sections */
-    background-color: #333;
+.blog-post {
+    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-.game:hover {
-    transform: translateY(-10px);
+.blog-post:hover {
+    transform: translateY(-5px);
 }
 
-.game img {
-    display: block; /* Ensure images behave as block elements */
-    width: 100%; /* Make images fill their container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px;
-    object-fit: cover; /* Maintain aspect ratio and cover container */
-    max-height: 300px; /* Limit maximum height of images */
+.blog-post h3 {
+    color: #343a40; /* Dark gray heading color */
+    margin-bottom: 10px;
 }
 
-.game h3 {
-    color: #fff;
-    margin-top: 10px;
+.blog-post p.meta {
+    color: #6c757d; /* Gray text color */
     margin-bottom: 5px;
-    font-size: 1.2rem;
 }
 
-.game p {
-    color: #ccc;
-    font-size: 1rem;
+.blog-post p {
+    color: #343a40; /* Dark gray text color */
     line-height: 1.4;
+}
+
+/* Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #343a40; /* Dark gray text color */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #212529; /* Dark background */
+    color: #f8f9fa; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #343a40; /* Darker background on hover */
 }
 
 /* Footer */
 footer {
+    background-color: #212529; /* Dark background */
+    color: #f8f9fa; /* White text color */
     text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 /* Button */
 .btn {
     display: inline-block;
-    background-color: #f0ad4e;
-    color: #fff;
+    background-color: #343a40; /* Dark gray */
+    color: #f8f9fa; /* White text color */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -172,5 +209,5 @@ footer {
 }
 
 .btn:hover {
-    background-color: #e0963e;
+    background-color: #6c757d; /* Darker gray on hover */
 }
