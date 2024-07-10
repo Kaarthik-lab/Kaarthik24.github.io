@@ -9,21 +9,56 @@
 
 /* Basic styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-header {
-    background-color: #333;
+    background-color: #1b1b1b;
     color: #fff;
-    padding: 10px 20px;
-    text-align: center;
 }
 
-header h1 {
-    margin-bottom: 10px;
+/* Hero section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden; /* Ensure background image doesn't overflow */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+nav {
+    position: absolute;
+    bottom: 20px;
 }
 
 nav ul {
@@ -31,32 +66,111 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;    
-    margin-right: 10px;
+    display: inline;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-}
-
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-section {
+nav ul li a:hover {
+    background-color: #f0ad4e; /* Highlight color */
+}
+
+/* About section */
+#about {
+    background-color: #333;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    color: #f0ad4e;
     margin-bottom: 20px;
 }
 
+.about-content p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Featured games section */
+#featured-games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #222;
+}
+
+.game {
+    width: 100%; /* Ensure each game section takes full width */
+    max-width: 300px; /* Limit maximum width of game sections */
+    margin: 0 auto; /* Center align game sections */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.game:hover {
+    transform: translateY(-10px);
+}
+
+.game img {
+    display: block; /* Ensure images behave as block elements */
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    max-height: 300px; /* Limit maximum height of images */
+}
+
+.game h3 {
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.game p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Footer */
 footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
     background-color: #333;
     color: #fff;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background-color: #f0ad4e;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e0963e;
 }
